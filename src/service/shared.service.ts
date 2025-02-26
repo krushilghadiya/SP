@@ -156,7 +156,11 @@ export class SharedService {
     {
       name: 'GST',
       image: 'GST.jpg'
-    }
+    },
+    {
+      name: 'MSME',
+      image: 'MSME.jpg'
+    },
   ]
   constructor() { }
 
