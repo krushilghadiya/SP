@@ -1,0 +1,133 @@
+<!-- main-area -->
+<main>
+  <!-- breadcrumb-area -->
+  <section
+    class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay certificate-section"
+  >
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-7 col-lg-12 col-md-12 col-12">
+          <div class="tp-breadcrumb">
+            <h2 class="tp-breadcrumb__title">Certificate</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- breadcrumb-area-end -->
+
+  <!-- <div id="image-template">
+    <div>
+      <img class="img-small" src="assets/img/certificate/GST.pdf" alt="" />
+    </div>
+  </div> -->
+
+  <div class="shop-area pt-120 pb-130">
+    <div class="container">
+      <div class="row">
+        <figure *ngFor="let item of certificate" class="snip1527">
+          <div class="image">
+            <img src="assets/img/certificate/{{ item.image }}" alt="" />
+          </div>
+          <figcaption>
+            <div class="preview" (click)="open(item.image)">
+              <img src="assets/img/preview.png" alt="" />
+            </div>
+            <h3>{{ item.name }}</h3>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <a
+    #fancyLink
+    data-fancybox="gallery"
+    href="assets/img/certificate/{{ image }}"
+  >
+  </a>
+</main>
+<!-- main-area-end -->
+
+<!-- footer-area -->
+<footer>
+  <div class="footer-area tp-footer-white-content theme-bg pt-95">
+    <div class="tp-footer-top pb-25">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div
+              class="tp-footer-widget footer-2-col-1 mb-40 wow fadeInUp"
+              data-wow-delay=".2s"
+            >
+              <div class="tp-footer-widget__content mb-95">
+                <i>FEEL FREE TO CONTACT US</i>
+                <h4 class="tp-footer-widget__contact mb-20">
+                  <a>{{ mobileNumber }}</a>
+                </h4>
+                <a>{{ email }}</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div
+              class="tp-footer-widget footer-2-col-2 mb-40 wow fadeInUp"
+              data-wow-delay=".4s"
+            >
+              <span class="tp-footer-widget__title mb-15">Useful links</span>
+              <div class="tp-footer-widget__links mb-35">
+                <ul>
+                  <li><a routerLink="">Home</a></li>
+                  <li><a routerLink="product">Product</a></li>
+                  <li><a routerLink="about">About</a></li>
+                  <li><a routerLink="contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div
+              class="tp-footer-widget footer-2-col-4 mb-40 wow fadeInUp"
+              data-wow-delay=".8s"
+            >
+              <span class="tp-footer-widget__title mb-15">Contact Info</span>
+              <div class="tp-footer-widget__links mb-120">
+                <ul>
+                  <li>
+                    <a>{{ address }}</a>
+                  </li>
+                  <li>
+                    <a>{{ indMobileNumber }}</a>
+                  </li>
+                  <li>
+                    <a>{{ email }}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tp-footer-widget__social fw-social">
+                <a><i class="fa-brands fa-facebook-f"></i></a>
+                <a><i class="fa-brands fa-twitter"></i></a>
+                <a><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-area-bottom fw-border">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-12">
+            <div class="footer-widget__copyright copyright-white">
+              <span>
+                © Copyright ©2025 <a routerLink="">{{ companyName }}</a
+                >. <i>All Rights Reserved Copyright</i></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer-area-end -->
