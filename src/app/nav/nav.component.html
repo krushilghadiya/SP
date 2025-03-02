@@ -52,7 +52,7 @@
                     <a>Product</a>
                     <ul class="sub-menu">
                       <li *ngFor="let item of products">
-                        <a routerLink="product/{{ item.category }}">{{
+                        <a routerLink="/product/{{ item.category }}">{{
                           item.category
                         }}</a>
                       </li>
@@ -61,10 +61,10 @@
                     [queryParams]="{ category: item.category }" -->
                   </li>
                   <li>
-                    <a routerLink="about">About</a>
+                    <a routerLink="/about">About</a>
                   </li>
-                  <li><a routerLink="contact">Contact</a></li>
-                  <li><a routerLink="certificate">Certificate</a></li>
+                  <li><a routerLink="/contact">Contact</a></li>
+                  <li><a routerLink="/certificate">Certificate</a></li>
                 </ul>
               </nav>
             </div>
