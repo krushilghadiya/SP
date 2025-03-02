@@ -28,7 +28,7 @@ const routes: Routes = [
     component: CertificateComponent
   },
   {
-    path: '**', component: HomeComponent
+    path: '**', redirectTo: '', component: HomeComponent
   }
 ];
 
