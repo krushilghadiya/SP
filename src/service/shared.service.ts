@@ -10,7 +10,7 @@ export class SharedService {
   whiteLogoUrl = 'assets/img/logo/white-logo.png';
   mobileNumber = '+44 7771610280';
   indMobileNumber = '+91 9712878800';
-  address = '27, Saraswati Socity Under Pramukh Swami Bridge, Behind Ashwani Kumar Police Station. 395008';
+  address = '27, Saraswati Society Under Pramukh Swami Bridge, Behind Ashwani Kumar Police Station. 395008';
   email = 'noreply@envato.com';
   companyMission = 'To deliver high-quality, accessible pharmaceuticals globally, enhancing healthcare through trusted partnerships and innovation.'
   products = [
