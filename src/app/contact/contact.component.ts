@@ -25,7 +25,7 @@ export class ContactComponent {
   });
 
   constructor(private sharedService: SharedService) {
-    this.loadScripts();
+    // this.loadScripts();
   }
 
   loadScripts() {
