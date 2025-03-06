@@ -2,63 +2,8 @@
 <main>
   <!-- slider-area -->
   <section class="slider-area slider-tp-top pt-100 p-relative">
-    <div class="slider-social">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-2 col-12 d-none d-md-block">
-            <div class="slider-content__arrow d-flex align-items-center">
-              <div class="slider-p">
-                <i class="fa-regular fa-arrow-left"></i>
-              </div>
-              <div class="slider-n">
-                <i class="fa-regular fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-container tp-slider slider-active">
+    <div class="swiper-container tp-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide bg-white">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6 col-md-12 col-12 order-2 order-lg-1">
-                <div class="slider-content pt-60">
-                  <h2 class="slider-content__title mb-45">
-                    Trusted Partner <br />
-                    in Global <br />
-                    Pharmaceutical Solutions
-                  </h2>
-                  <p>
-                    Providing the highest quality medicines to improve health
-                    worldwide. Partnering for a healthier tomorrow, today.
-                  </p>
-                  <div class="slider-content__btn mb-165">
-                    <a class="tp-btn" routerLink="/contact">CONTACT US</a>
-                    <a class="tp-btn-second ml-25" routerLink="/about"
-                      >ABOUT US</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-12 order-1 order-lg-2">
-                <div class="slider-content__bg">
-                  <img
-                    src="assets/img/slider/slider-bg-1.png"
-                    alt="slider-img"
-                  />
-                </div>
-                <div class="slider-content__shape d-none d-md-block">
-                  <img
-                    src="assets/img/slider/slider-bg-2.png"
-                    alt="slider-shape"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="swiper-slide bg-white">
           <div class="container">
             <div class="row align-items-center">
@@ -76,9 +21,6 @@
                   </p>
                   <div class="slider-content__btn mb-165">
                     <a class="tp-btn" routerLink="/contact">CONTACT US</a>
-                    <a class="tp-btn-second ml-25" routerLink="/about"
-                      >ABOUT US</a
-                    >
                   </div>
                 </div>
               </div>
@@ -105,10 +47,7 @@
   <!-- slider-area-end -->
 
   <!-- about-area -->
-  <section
-    class="about-area grey-bg pt-130 tp-box-space pb-130 ml-30 mr-30"
-    data-background="assets/img/shape/shape-bg-05.png"
-  >
+  <section class="about-area grey-bg pt-130 tp-box-space pb-130 ml-30 mr-30">
     <div class="about-wrapper">
       <div class="container">
         <div class="row">
@@ -163,7 +102,6 @@
   <section
     *ngIf="false"
     class="choose-area grey-bg pt-125 pb-70 tp-box-space ml-30 mr-30"
-    data-background="assets/img/shape/shape-bg-07.png"
   >
     <div class="container">
       <div class="row">
@@ -281,7 +219,6 @@
   <!-- contact-area -->
   <section
     class="appoinment-area grey-bg mb-50 mb-150 tp-box-space ml-30 mr-30"
-    data-background="assets/img/shape/shape-bg-08.png"
   >
     <div class="container">
       <div class="row align-items-end">
@@ -369,10 +306,7 @@
   <!-- contact-area-end -->
 
   <!-- testimonial-area -->
-  <div
-    class="testimonial-area pt-130 pb-125 mb-100 testi-bg theme-light-bg"
-    data-background="assets/img/shape/shape-bg-05.png"
-  >
+  <div class="testimonial-area pt-130 pb-125 mb-100 testi-bg theme-light-bg">
     <div class="container p-relative wow fadeInUp" data-wow-delay=".3s">
       <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6">
@@ -417,7 +351,6 @@
                     never had an issue with delivery times or product quality.
                   </p>
                   <i>John D.</i>
-                  <!-- <span>Programmer of (FlaxStudio)</span> -->
                 </div>
               </div>
               <div class="swiper-slide">
@@ -430,7 +363,6 @@
                     accurate deliveries
                   </p>
                   <i>Maria S.</i>
-                  <!-- <span>Programmer of (FlaxStudio)</span> -->
                 </div>
               </div>
               <div class="swiper-slide">
@@ -443,7 +375,6 @@
                     smoothly.
                   </p>
                   <i>Mark H.</i>
-                  <!-- <span>Manager of (FlaxStudio)</span> -->
                 </div>
               </div>
               <div class="swiper-slide">
@@ -455,7 +386,6 @@
                     we truly appreciate. A trusted partner in every sense.
                   </p>
                   <i>Emma W.</i>
-                  <!-- <span>CEO of (FlaxStudio)</span> -->
                 </div>
               </div>
             </div>
@@ -465,37 +395,6 @@
     </div>
   </div>
   <!-- testimonial-area-end -->
-
-  <!-- news-letter-area -->
-  <section
-    class="news-letter-area pt-110 pb-110 news-round-shape p-relative tp-box-space mr-30 ml-30 theme-light-bg fix"
-    data-background="assets/img/shape/shape-bg-05.png"
-  >
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-8 col-md-10 col-12">
-          <div class="newsletter-content text-center">
-            <h3 class="newsletter-title mb-15">Newsletter</h3>
-            <span>#Subscribe newsletter for get every update</span>
-            <div class="newsletter-form p-relative ml-10 mr-10">
-              <form>
-                <input
-                  type="email"
-                  placeholder="info.yourwebmail@gmail.com"
-                  name="emailSub"
-                  [(ngModel)]="emailSub"
-                />
-                <button (click)="sub()" class="newsletter-btn">
-                  Subscribe<i class="fa-solid fa-paper-plane"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- news-letter-area-end -->
 </main>
 <!-- main-area-end -->
 
@@ -527,10 +426,10 @@
               <span class="tp-footer-widget__title mb-15">Useful links</span>
               <div class="tp-footer-widget__links mb-35">
                 <ul>
-                  <li><a routerLink="">Home</a></li>
+                  <li><a routerLink="/home">Home</a></li>
                   <li><a routerLink="/about">About</a></li>
-                  <li><a routerLink="/contact">Contact</a></li>
                   <li><a routerLink="/certificate">Certificate</a></li>
+                  <li><a routerLink="/contact">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -570,7 +469,7 @@
           <div class="col-xl-6 col-lg-6 col-md-12 col-12">
             <div class="footer-widget__copyright copyright-white">
               <span>
-                © Copyright ©2025 <a routerLink="">{{ companyName }}</a
+                © Copyright ©2025 <a routerLink="/home">{{ companyName }}</a
                 >. <i>All Rights Reserved Copyright</i></span
               >
             </div>

@@ -26,6 +26,14 @@ export class HomeComponent {
   });
 
   constructor(private sharedService: SharedService) {
+    const file = ["assets/js/main.js", "assets/js/swiper-bundle.js"]
+    for (let i = 0; i < file.length; i++) {
+      const node = document.createElement('script');
+      node.src = file[i];
+      node.type = 'text/javascript';
+      node.async = false;
+      document.getElementsByTagName('head')[0].appendChild(node);
+    }
   }
 
   onSubmit(): void {

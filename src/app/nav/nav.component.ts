@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 import { SharedService } from 'src/service/shared.service';
 
 @Component({
@@ -16,9 +17,21 @@ export class NavComponent {
   email = this.sharedService.email;
   products = this.sharedService.products;
   emailSub = '';
+  isActive = false
 
-  constructor(private sharedService: SharedService, private route: Router) {
-    // this.loadScripts();
+  constructor(private sharedService: SharedService, private route: Router, private activatedRoute: ActivatedRoute) {
+    this.route.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        this.isActive = event.url.includes('product')
+      }
+
+      // let currentRoute = this.route;
+      // while (currentRoute.firstChild) currentRoute = currentRoute.firstChild;
+      // if (this.componentBeforeNavigation !== currentRoute.component) {
+      //   if (window) window.scrollTo(0, 0);
+      // }
+      // this.componentBeforeNavigation = currentRoute.component;
+    });
   }
 
 

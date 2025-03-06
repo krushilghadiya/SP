@@ -7,8 +7,9 @@ import { ProductComponent } from './product/product.component';
 import { CertificateComponent } from './certificate/certificate.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
