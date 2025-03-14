@@ -29,7 +29,7 @@
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "src/styles.scss"
             ],
-            "scripts": ["assets/js/swiper-bundle.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {
