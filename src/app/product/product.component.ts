@@ -33,7 +33,6 @@ export class ProductComponent {
 
     this.route.params.subscribe(
       (params) => {
-        debugger
         this.params = params['category']
         this.selectedCategory = params['category'] && this.productCategory.find(data => data.router === params['category'])
         if (this.selectedCategory?.categoryId) {
