@@ -22,7 +22,6 @@ export class CertificateComponent {
 
   constructor(private sharedService: SharedService, private elRef: ElementRef, private changeDetectorRef: ChangeDetectorRef) {
     Fancybox.bind(this.elRef.nativeElement, '[data-fancybox]', {
-      // Custom options
     });
   }
 

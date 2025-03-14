@@ -16,23 +16,101 @@
   </section>
   <!-- breadcrumb-area-end -->
 
+  <!-- category-area -->
+  <div class="container pt-120">
+    <div class="description">
+      <h2 class="description-title">Pharmaceutical and Wellness Solutions</h2>
+      <p>
+        Pharmaceutical supplements cater to various health needs. Multivitamin
+        supplements provide essential nutrients for overall well-being, while
+        joint supplements aid mobility and reduce inflammation. Weight loss
+        supplements boost metabolism, and eye supplements support vision health.
+        Iron supplements prevent anemia, whereas diabetic supplements help
+        regulate blood sugar. HNS supplements enhance hair, nails, and skin, and
+        digestive supplements improve gut health. Energy supplements fight
+        fatigue, kids' supplements support growth, anti-cancer supplements offer
+        antioxidant protection, and immunity supplements strengthen the body's
+        defenses. Each category targets specific health concerns for a balanced
+        lifestyle.
+      </p>
+    </div>
+
+    <owl-carousel-o [options]="customOptions" #owlCar>
+      <ng-template
+        *ngFor="let item of productCategory"
+        [id]="item.router"
+        carouselSlide
+        ><div class="category-card">
+          <div
+            class="child-category-card"
+            [ngClass]="{ 'selected-card': params === item.router }"
+            (click)="getProduct(item)"
+          >
+            <img
+              [height]="180"
+              [src]="
+                'assets/img/category-img/' +
+                (item.img || 'image-not-available.jpg')
+              "
+              alt=""
+            />
+            <div class="category-name">
+              <span>{{ item.category }}</span>
+            </div>
+          </div>
+        </div></ng-template
+      >
+    </owl-carousel-o>
+    <p class="d-flex w-100 justify-content-end cor-button-group gap-3">
+      <a class="btn" (click)="owlCar.prev()"
+        ><img [width]="18" src="assets/img/left.png" alt=""
+      /></a>
+      <a class="btn" (click)="owlCar.next()"
+        ><img [width]="18" src="assets/img/right.png" alt=""
+      /></a>
+    </p>
+  </div>
+
+  <!-- category-area-end -->
+
   <!-- shope-area -->
   <div class="shop-area pt-120 pb-130">
+    <div class="container search gap-3">
+      <h2 class="mb-0">{{ selectedCategory.category }}</h2>
+      <div class="position-relative text-center">
+        <img
+          class="search-icon"
+          [width]="25"
+          src="assets/img/search.png"
+          alt=""
+        />
+
+        <input
+          #searchInput
+          name="search"
+          type="text"
+          [(ngModel)]="searchedValue"
+          placeholder="Search..."
+        />
+      </div>
+    </div>
     <div class="container">
-      <div class="row">
-        <div *ngFor="let item of product" class="col-xl-3 col-lg-4 col-md-4">
-          <div class="tpshopitem mb-50 wow fadeInUp" data-wow-delay=".2s">
-            <div class="tpshopitem__thumb p-relative fix mb-35">
-              <a><img [src]="item.img" /></a>
-              <!-- <div class="tpshopitem__thumb-icon">
-                <a><i class="fal fa-shopping-cart"></i></a>
-              </div> -->
+      <div class="row product-list">
+        <div *ngFor="let item of products" class="col-xl-3 col-lg-4 col-md-4">
+          <div
+            class="tpshopitem wow fadeInUp product-card"
+            data-wow-delay=".2s"
+          >
+            <div class="tpshopitem__thumb p-relative fix">
+              <a><img [src]="'assets/img/shop/image-not-available.jpg'" /></a>
             </div>
             <div class="tpshopitem__content text-center">
-              <span class="tpshopitem__title mb-5"
-                ><a>{{ item.title }}</a></span
+              <span class="tpshopitem__title mb-5 cursor-pointer"
+                ><a routerLink="/product/{{ params }}/{{ item.productId }}">{{
+                  item.productName
+                }}</a></span
               >
-              <p>{{ item.content }}</p>
+              <p class="form">{{ item.form }}</p>
             </div>
           </div>
         </div>
@@ -72,6 +150,7 @@
               <div class="tp-footer-widget__links mb-35">
                 <ul>
                   <li><a routerLink="/home">Home</a></li>
+                  <li><a routerLink="/product">Product</a></li>
                   <li><a routerLink="/about">About</a></li>
                   <li><a routerLink="/certificate">Certificate</a></li>
                   <li><a routerLink="/contact">Contact</a></li>

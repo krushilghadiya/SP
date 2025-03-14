@@ -166,11 +166,6 @@ export class SharedService {
 
   sendEmail(data: any): void {
     emailjs.send("service_1j8p9d4", "template_0vo9c3k", {
-      // message: "few",
-      // name: "asd",
-      // email: "wsd",
-      // number: "wf",
-      // website: "qw",
       ...data
     });
   }

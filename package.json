@@ -20,6 +20,8 @@
     "@angular/router": "^16.2.0",
     "@emailjs/browser": "^4.4.1",
     "@fancyapps/ui": "^5.0.36",
+    "animate.css": "^4.1.1",
+    "ngx-owl-carousel-o": "^16.0.0",
     "rxjs": "~7.8.0",
     "sp": "file:",
     "tslib": "^2.3.0",

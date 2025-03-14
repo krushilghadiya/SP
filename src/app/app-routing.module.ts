@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { CertificateComponent } from './certificate/certificate.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,14 +23,22 @@ const routes: Routes = [
   },
   {
     path: 'product/:category',
-    component: ProductComponent
+    component: ProductComponent,
+  },
+  {
+    path: 'product/:category/:productId',
+    component: ProductDetailComponent
+  },
+  {
+    path: 'product',
+    component: ProductComponent,
   },
   {
     path: 'certificate',
     component: CertificateComponent
   },
   {
-    path: '**', redirectTo: '', component: HomeComponent
+    path: '**', redirectTo: '/home',
   }
 ];
 
