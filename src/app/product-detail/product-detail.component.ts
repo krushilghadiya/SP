@@ -48,7 +48,7 @@ export class ProductDetailComponent {
           this.router.navigate(['/home'])
         }
         setTimeout(() => {
-          this.scrollView.nativeElement.scrollIntoView();
+          this.scrollView?.nativeElement.scrollIntoView();
         }, 0);
       })
   }

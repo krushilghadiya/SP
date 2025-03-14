@@ -810,5 +810,19 @@ export const product = [
     "productId": 7,
     "form": "Capsule/Powder",
     "productName": "Lactoferrin",
+  },
+  {
+    "category": "ACTIVE PHARMACEUTICAL INGREDIENT",
+    "categoryId": 13,
+    "productId": 1,
+    "form": "Powder",
+    "productName": "Lidocaine hydrochloride API",
+  },
+  {
+    "category": null,
+    "categoryId": 13,
+    "productId": 2,
+    "form": "Powder",
+    "productName": "Lidocaine base API",
   }
 ]

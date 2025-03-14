@@ -71,5 +71,11 @@ export const category = [
     "categoryId": 12,
     "router": "immunity-supplement",
     "img": "immunity-supplement.jpg"
+  },
+  {
+    "category": "ACTIVE PHARMACEUTICAL INGREDIENT",
+    "categoryId": 13,
+    "router": "api",
+    "img": "api.jpg"
   }
 ]
