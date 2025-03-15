@@ -8,7 +8,7 @@ export class SharedService {
   companyName = 'Shyam Pharma';
   logoUrl = 'assets/img/logo/logo.png';
   whiteLogoUrl = 'assets/img/logo/white-logo.png';
-  mobileNumber = '+44 77 7161 0280';
+  mobileNumber = '+44 7771 610280';
   indMobileNumber = '+91 9712878800';
   address = '27, Saraswati Society Under Pramukh Swami Bridge, Behind Ashwani Kumar Police Station. 395008';
   email = 'noreply@envato.com';
