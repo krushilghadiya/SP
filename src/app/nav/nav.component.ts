@@ -15,7 +15,6 @@ export class NavComponent {
   companyMission = this.sharedService.companyMission;
   address = this.sharedService.address;
   email = this.sharedService.email;
-  products = this.sharedService.products;
   emailSub = '';
   isActive = false;
   productCategory = category
