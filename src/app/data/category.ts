@@ -46,7 +46,7 @@ export const category = [
     "category": "DIGESTIVE SUPPLEMENT",
     "categoryId": 8,
     "router": "digestive-supplement",
-    "img": "digestive-supplement.png"
+    "img": "digestive-supplement.jpg"
   },
   {
     "category": "ENERGY SUPPLEMENT",
