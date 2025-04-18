@@ -12,7 +12,6 @@ export class HomeComponent {
   companyName = this.sharedService.companyName;
   mobileNumber = this.sharedService.mobileNumber
   indMobileNumber = this.sharedService.indMobileNumber
-  whiteLogoUrl = this.sharedService.whiteLogoUrl;
   companyMission = this.sharedService.companyMission;
   address = this.sharedService.address;
   email = this.sharedService.email;

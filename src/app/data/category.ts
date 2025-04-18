@@ -77,5 +77,11 @@ export const category = [
     "categoryId": 13,
     "router": "api",
     "img": "api.jpg"
+  },
+  {
+    "category": "PHOSPHODIESTERASE",
+    "categoryId": 14,
+    "router": "phosphodiesterase",
+    "img": "phosphodiesterase.jpeg"
   }
 ]

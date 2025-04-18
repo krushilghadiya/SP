@@ -11,7 +11,6 @@ import { category } from '../data/category';
 export class NavComponent {
   logoUrl = this.sharedService.logoUrl;
   mobileNumber = this.sharedService.mobileNumber
-  whiteLogoUrl = this.sharedService.whiteLogoUrl;
   companyMission = this.sharedService.companyMission;
   address = this.sharedService.address;
   email = this.sharedService.email;

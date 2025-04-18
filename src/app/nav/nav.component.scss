@@ -3,5 +3,11 @@
 }
 
 .main-menu ul > li .sub-menu {
-  width: 266px;
+  max-width: 270px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.mobile-menu {
+  padding-top: 60px;
 }

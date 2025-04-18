@@ -16,9 +16,8 @@ export class ProductComponent {
   @ViewChild('searchInput') searchInput!: ElementRef
   logoUrl = this.sharedService.logoUrl;
   companyName = this.sharedService.companyName;
-  mobileNumber = this.sharedService.mobileNumber
-  indMobileNumber = this.sharedService.indMobileNumber
-  whiteLogoUrl = this.sharedService.whiteLogoUrl;
+  mobileNumber = this.sharedService.mobileNumber;
+  indMobileNumber = this.sharedService.indMobileNumber;
   companyMission = this.sharedService.companyMission;
   address = this.sharedService.address;
   email = this.sharedService.email;

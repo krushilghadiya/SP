@@ -1178,7 +1178,7 @@ input[type=color] {
   text-align: center;
 }
 .header-logo-box img {
-  width: 220px;
+  width: 150px;
 }
 
 .header-menu-box {
@@ -1700,11 +1700,11 @@ input[type=color] {
 }
 
 .tp-mob-logo img {
-  width: 220px;
+  width: 155px;
 }
 @media (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-mob-logo img {
-    width: 180px;
+    width: 111px;
   }
 }
 
