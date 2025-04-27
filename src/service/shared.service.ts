@@ -6,10 +6,8 @@ import emailjs from '@emailjs/browser';
 })
 export class SharedService {
   companyName = 'Shyam Pharma';
-  // logoUrl = 'assets/img/logo/logo.png';
-  // logoUrl = 'assets/img/logo/i.jpeg';
   logoUrl = 'assets/img/logo/i.png';
-  // logoUrl = 'assets/img/logo/j.jpeg';
+  preloader = 'assets/img/logo/i.png';
   mobileNumber = '+44 7771 610280';
   indMobileNumber = '+91 9712878800';
   address = '27, Saraswati Society Under Pramukh Swami Bridge, Behind Ashwani Kumar Police Station. 395008';

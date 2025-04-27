@@ -10,6 +10,7 @@ import { category } from '../data/category';
 })
 export class NavComponent {
   logoUrl = this.sharedService.logoUrl;
+  preloader = this.sharedService.preloader;
   mobileNumber = this.sharedService.mobileNumber
   companyMission = this.sharedService.companyMission;
   address = this.sharedService.address;
