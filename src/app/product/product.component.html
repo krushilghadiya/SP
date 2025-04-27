@@ -49,8 +49,9 @@
             <img
               [height]="180"
               [src]="
+                item.url ||
                 'assets/img/category-img/' +
-                (item.img || 'image-not-available.jpg')
+                  (item.img || 'image-not-available.jpg')
               "
               alt=""
             />
