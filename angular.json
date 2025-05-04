@@ -27,17 +27,42 @@
             "styles": [
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/aos/dist/aos.css",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/swiper/swiper-bundle.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/magnific-popup/dist/magnific-popup.css",
+              "node_modules/jquery-nice-select/css/nice-select.css",
+              "src/assets/css/font-awesome-pro.css",
+              "src/assets/css/flaticon.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/aos/dist/aos.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/swiper/swiper-bundle.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js",
+              "node_modules/waypoints/lib/jquery.waypoints.min.js",
+              "node_modules/counterup/jquery.counterup.min.js",
+              "node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+              "node_modules/imagesloaded/imagesloaded.pkgd.min.js",
+              "node_modules/wowjs/dist/wow.min.js",
+              "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
+              "node_modules/jquery.appear/jquery.appear.js",
+              "node_modules/jquery-knob/dist/jquery.knob.min.js",
+              "src/assets/js/meanmenu.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",

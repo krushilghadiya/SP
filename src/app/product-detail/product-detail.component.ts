@@ -4,6 +4,7 @@ import { SharedService } from 'src/service/shared.service';
 import { category } from '../data/category';
 import { productDetail } from '../data/product-details';
 import { product } from '../data/product';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-product-detail',
@@ -12,6 +13,7 @@ import { product } from '../data/product';
 })
 export class ProductDetailComponent {
   @ViewChild('scrollView') scrollView!: ElementRef
+  @ViewChild('shopSliderActive', { static: false }) shopSliderActive!: ElementRef
   mobileNumber = this.sharedService.mobileNumber
   email = this.sharedService.email;
   address = this.sharedService.address;
@@ -22,14 +24,6 @@ export class ProductDetailComponent {
   categoryRoute!: any
 
   constructor(private sharedService: SharedService, private route: ActivatedRoute, private router: Router) {
-    const file = ["assets/js/main.js", "assets/js/swiper-bundle.js"]
-    for (let i = 0; i < file.length; i++) {
-      const node = document.createElement('script');
-      node.src = file[i];
-      node.type = 'text/javascript';
-      node.async = false;
-      document.getElementsByTagName('head')[0].appendChild(node);
-    }
     this.route.params.subscribe(
       (params) => {
         const categoryId = params['category'] && category.find(data => data.router === params['category'])?.categoryId;
@@ -38,6 +32,7 @@ export class ProductDetailComponent {
           this.productDetails = productDetail.find(data => data.categoryId === categoryId && data.productId === productId)
           const products = product.find(data => data.categoryId === categoryId && data.productId === productId);
           this.relatedProduct = product.filter(data => data.categoryId === categoryId) || [];
+          this.shopSliderActiveSwiper()
           this.categoryRoute = params['category'];
           if (this.productDetails && products) {
             this.productDetails.productName = products?.productName
@@ -51,6 +46,42 @@ export class ProductDetailComponent {
           this.scrollView?.nativeElement.scrollIntoView();
         }, 0);
       })
+  }
+
+  ngAfterViewInit(): void {
+    this.shopSliderActiveSwiper();
+  }
+
+  shopSliderActiveSwiper(): void {
+    if (this.shopSliderActive) {
+      new Swiper(this.shopSliderActive?.nativeElement, {
+        // Optional parameters
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 3,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: true,
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          576: {
+            slidesPerView: 1,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        },
+      });
+    }
   }
 
 }

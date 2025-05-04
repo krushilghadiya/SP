@@ -1,5 +1,51 @@
+<!-- nav-bar-reusable -->
+<ng-template #reusableNavbar
+  ><ul>
+    <li
+      *ngFor="let nav of navbar"
+      [ngClass]="{
+      'has-dropdown': nav.subMenu?.length,
+    }"
+    >
+      <a
+        [routerLinkActive]="nav.subMenu?.length ? '' : 'active'"
+        [routerLink]="nav.routerLink"
+        [ngClass]="{
+          active: isActive && nav.subMenu?.length
+        }"
+        (mouseenter)="mouseover(nav, true)"
+        >{{ nav.name }}</a
+      >
+      <ul
+        *ngIf="nav.subMenu?.length && nav.isOpen"
+        class="sub-menu"
+        (mouseenter)="mouseover(nav, true)"
+        (mouseleave)="mouseover(nav, false)"
+      >
+        <li *ngFor="let item of nav.subMenu">
+          <a routerLink="/{{ nav.routerLink }}/{{ item.router }}">{{
+            item.category
+          }}</a>
+        </li>
+      </ul>
+      <a
+        *ngIf="isMobileMenu && nav.subMenu?.length"
+        class="mean-expand"
+        style="font-size: 18px"
+        (click)="nav.isOpen = !nav.isOpen"
+        ><i class="fal fa-plus"></i
+      ></a>
+    </li></ul
+></ng-template>
+<!-- nav-bar-reusable-end -->
+
 <!-- Scroll-top -->
-<button class="scroll-top scroll-to-target" data-target="html">
+<button
+  class="scroll-top scroll-to-target"
+  [ngClass]="{ open: isScrollTargetOpen }"
+  (click)="scrollToTarget()"
+  data-target="html"
+>
   <i class="fas fa-angle-up"></i>
 </button>
 <!-- Scroll-top-end-->
@@ -22,38 +68,7 @@
           <div class="col-lg-7">
             <div class="main-menu main-menu-second">
               <nav id="mobile-menu">
-                <ul>
-                  <li>
-                    <a [routerLinkActive]="'active'" routerLink="/home">Home</a>
-                  </li>
-                  <li class="has-dropdown">
-                    <a class="product" [ngClass]="{ active: isActive }"
-                      >Product</a
-                    >
-                    <ul class="sub-menu">
-                      <li *ngFor="let item of productCategory">
-                        <a routerLink="/product/{{ item.router }}">{{
-                          item.category
-                        }}</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a [routerLinkActive]="'active'" routerLink="/about"
-                      >About</a
-                    >
-                  </li>
-                  <li>
-                    <a [routerLinkActive]="'active'" routerLink="/certificate"
-                      >Certificate</a
-                    >
-                  </li>
-                  <li>
-                    <a [routerLinkActive]="'active'" routerLink="/contact"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
+                <ng-template [ngTemplateOutlet]="reusableNavbar"></ng-template>
               </nav>
             </div>
           </div>
@@ -64,7 +79,10 @@
               <div
                 class="header-cart-list h-100 m-0 d-flex align-items-center justify-content-end"
               >
-                <button class="tp-menu-toggle h-100 m-0 header-bottom-btn">
+                <button
+                  class="tp-menu-toggle h-100 m-0 header-bottom-btn"
+                  (click)="openSidebar()"
+                >
                   CONTACT US
                 </button>
               </div>
@@ -112,7 +130,9 @@
               ><span>Contact :</span>{{ mobileNumber }}
             </a>
           </div>
-          <button class="tp-menu-toggle"><i class="far fa-bars"></i></button>
+          <button class="tp-menu-toggle" (click)="openSidebar()">
+            <i class="far fa-bars"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -121,13 +141,29 @@
 <!-- tp-mobile-header-area end -->
 
 <!-- sidebar-info -->
-<div class="tpsideinfo tp-side-info-area">
-  <button class="tpsideinfo__close"><i class="fal fa-times"></i></button>
+<div
+  class="tpsideinfo tp-side-info-area"
+  [ngClass]="{ 'tp-sidebar-opened': isSidebarOpen }"
+>
+  <button class="tpsideinfo__close" (click)="closeSidebar()">
+    <i class="fal fa-times"></i>
+  </button>
   <!-- <div class="tpsideinfo__logo mb-40">
     <a routerLink="/"><img [src]="whiteLogoUrl" alt="logo" /></a>
   </div> -->
 
-  <div class="mobile-menu"></div>
+  <!-- <div class="mobile-menu"></div> -->
+  <div *ngIf="isMobileMenu" class="mobile-menu mean-container">
+    <div class="mean-bar">
+      <a class="meanmenu-reveal" style="right: 0px; left: auto; display: inline"
+        ><span
+          ><span><span></span></span></span
+      ></a>
+      <nav class="mean-nav">
+        <ng-template [ngTemplateOutlet]="reusableNavbar"></ng-template>
+      </nav>
+    </div>
+  </div>
 
   <div class="tpsideinfo__content mb-60">
     <p class="d-none d-xl-block">
@@ -157,4 +193,8 @@
 </div>
 <!-- sidebar-info-end -->
 
-<div class="body-overlay"></div>
+<div
+  class="body-overlay"
+  (click)="closeSidebar()"
+  [ngClass]="{ opened: isSidebarOpen }"
+></div>

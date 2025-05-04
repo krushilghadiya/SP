@@ -122,12 +122,12 @@
           >
             <div class="progress-circular tl-progress">
               <input
+                [style]="{ width: '165px' }"
                 type="text"
                 class="knob"
                 value="0"
                 data-rel="100"
                 data-linecap="round"
-                data-width="165"
                 data-height="165"
                 data-bgcolor="#ECEEF3"
                 data-fgcolor="#0E63FF"
@@ -146,12 +146,12 @@
           >
             <div class="progress-circular tl-progress">
               <input
+                [style]="{ width: '165px' }"
                 type="text"
                 class="knob"
                 value="0"
                 data-rel="95"
                 data-linecap="round"
-                data-width="165"
                 data-height="165"
                 data-bgcolor="#ECEEF3"
                 data-fgcolor="#F72A75"
@@ -170,12 +170,12 @@
           >
             <div class="progress-circular tl-progress">
               <input
+                [style]="{ width: '165px' }"
                 type="text"
                 class="knob"
                 value="0"
                 data-rel="98"
                 data-linecap="round"
-                data-width="165"
                 data-height="165"
                 data-bgcolor="#ECEEF3"
                 data-fgcolor="#42BFFF"
@@ -194,12 +194,12 @@
           >
             <div class="progress-circular tl-progress">
               <input
+                [style]="{ width: '165px' }"
                 type="text"
                 class="knob"
                 value="0"
                 data-rel="95"
                 data-linecap="round"
-                data-width="165"
                 data-height="165"
                 data-bgcolor="#ECEEF3"
                 data-fgcolor="#10D0A1"
@@ -311,36 +311,52 @@
       <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6">
           <div class="testi-thumb text-center">
-            <div class="swiper-container swiper test-ava-active">
+            <div #testAvaActive class="swiper-container swiper test-ava-active">
               <div class="swiper-wrapper testi-avta-bottom pb-70">
                 <div class="swiper-slide">
-                  <img src="assets/img/icon/testi-ava-04.png" alt="" />
+                  <img
+                    class="cursor-pointer"
+                    src="assets/img/icon/testi-ava-04.png"
+                    alt=""
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/icon/testi-ava-05.png" alt="" />
+                  <img
+                    class="cursor-pointer"
+                    src="assets/img/icon/testi-ava-05.png"
+                    alt=""
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/icon/testi-ava-06.png" alt="" />
+                  <img
+                    class="cursor-pointer"
+                    src="assets/img/icon/testi-ava-06.png"
+                    alt=""
+                  />
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/icon/testi-ava-07.png" alt="" />
+                  <img
+                    class="cursor-pointer"
+                    src="assets/img/icon/testi-ava-07.png"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="testi-arrow">
-          <div class="testi-button-next">
+          <div #nextButton class="testi-button-next cursor-pointer">
             <i class="fa-regular fa-arrow-right"></i>
           </div>
-          <div class="testi-button-prev">
+          <div #previousButton class="testi-button-prev cursor-pointer">
             <i class="fa-regular fa-arrow-left"></i>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-xl-9 col-lg-10 col-md-11 col-12">
-          <div class="swiper-container swiper test-active">
+          <div #testActive class="swiper-container swiper test-active">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testi-content text-center">
@@ -457,7 +473,9 @@
               <div class="tp-footer-widget__social fw-social">
                 <a><i class="fa-brands fa-facebook-f"></i></a>
                 <a><i class="fa-brands fa-twitter"></i></a>
-                <a><i class="fa-brands fa-instagram"></i></a>
+                <a [href]="instagramLink" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
               </div>
             </div>
           </div>
